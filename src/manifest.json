@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Yougle",
+  "version": "1.0",
+  "description": "Hides YouTube recommended videos and distractions.",
+  "permissions": ["scripting"],
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
