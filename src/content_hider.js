@@ -14,6 +14,12 @@ function hideRecommendations() {
       el.style.display = 'none';
     });
   });
+  document.querySelectorAll('a#endpoint[title="Shorts"]').forEach(el => {
+  el.style.display = 'none';
+  });
+    if (location.pathname.startsWith('/shorts')) {
+    window.location.href = 'https://www.youtube.com';
+  }
 }
 
 hideRecommendations();
