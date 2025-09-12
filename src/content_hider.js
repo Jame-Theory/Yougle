@@ -5,6 +5,8 @@ const selectorsToHide = [
   'ytd-compact-autoplay-renderer', // Autoplay up next
   'ytp-endscreen-content', // Endscreen suggestions
   'ytd-rich-grid-renderer', // Home page video grid
+  'a#endpoint[title="Shorts"]',
+  'ytp-endscreen-content',
 ];
 
 function hideRecommendations() {
@@ -13,9 +15,6 @@ function hideRecommendations() {
     elements.forEach(el => {
       el.style.display = 'none';
     });
-  });
-  document.querySelectorAll('a#endpoint[title="Shorts"]').forEach(el => {
-  el.style.display = 'none';
   });
     if (location.pathname.startsWith('/shorts')) {
     window.location.href = 'https://www.youtube.com';
