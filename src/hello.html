@@ -1,6 +1,35 @@
+<!DOCTYPE html>
 <html>
-  <body>
-    <h1>Yougle</h1>
-    <script src="content_hider.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title>Yougle Controls</title>
+  <style>
+    body { font: 14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 12px; width: 260px; }
+    .row { margin-bottom: 10px; display: flex; gap: 8px; align-items: center; justify-content: space-between; }
+    label { font-weight: 600; }
+    select { width: 140px; }
+    .hint { color: #666; font-size: 12px; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <label for="shorts">Shorts</label>
+    <select id="shorts">
+      <option value="block">Block</option>
+      <option value="allow">Allow</option>
+    </select>
+  </div>
+
+  <div class="row">
+    <label for="recs">Recommended</label>
+    <select id="recs">
+      <option value="block">Block</option>
+      <option value="allow">Allow</option>
+    </select>
+  </div>
+
+  <div class="hint">Saved instantly. Open YouTube to see it.</div>
+
+  <script src="hello.js"></script>
+</body>
 </html>
